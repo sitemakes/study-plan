@@ -268,15 +268,18 @@ export default function Home() {
             中高生向けオンライン学習サポート
           </p>
           <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-normal text-slate-950 sm:text-5xl">
-            勉強を、続けやすく。
+            チャットと面談で管理する学習サポート
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
-            動画で学び、面談で進み具合を確認。ひとりでは続きにくい勉強を、計画づくりから見直しまでサポートします。
+            勉強計画を作って終わりではなく、週ごとの進捗確認と計画修正まで行います。塾や学校の教材を使いながら、続けやすい学習習慣を作ります。
           </p>
+          <div className="mt-6 inline-flex items-end gap-2 rounded-2xl border border-primary-100 bg-primary-50 px-5 py-4">
+            <span className="text-sm font-bold text-primary-700">月額</span>
+            <span className="text-3xl font-extrabold tracking-normal text-primary-700">14,800円〜</span>
+          </div>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <LineButton />
-            <AnchorButton href="#service">サービス内容を見る</AnchorButton>
-            <AnchorButton href="#pricing">プランを見る</AnchorButton>
+            <AnchorButton href="#pricing">料金プランを見る</AnchorButton>
           </div>
         </div>
         <div className="rounded-2xl border border-primary-50 bg-primary-50 p-5 sm:p-6">

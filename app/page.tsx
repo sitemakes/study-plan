@@ -268,7 +268,7 @@ export default function Home() {
             中高生向けオンライン学習サポート
           </p>
           <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-normal text-slate-950 sm:text-5xl">
-            勉強の計画倒れを、動画とコーチングで防ぐ。
+            勉強を、続けやすく。
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
             動画で学び、面談で進み具合を確認。ひとりでは続きにくい勉強を、計画づくりから見直しまでサポートします。

@@ -294,7 +294,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-slate-100 bg-slate-50 py-14 sm:py-18">
+      <section className="border-y border-slate-100 bg-slate-50 py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader title="こんな悩みはありませんか？" />
           <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

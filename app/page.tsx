@@ -32,10 +32,10 @@ const products = [
       "学び方のポイント解説"
     ],
     fit: [
-      "まずは手軽に試したい人",
-      "自分のペースで学びたい人",
-      "独学で進めたい人",
-      "コーチングの前に教材を試してみたい人"
+      "まずは手軽に試したい方",
+      "自分のペースで学びたい方",
+      "独学で進めたい方",
+      "コーチングの前に教材を試してみたい方"
     ]
   },
   {
@@ -53,9 +53,9 @@ const products = [
       "必要に応じた動画パックの提案"
     ],
     fit: [
-      "最低限のサポートがほしい人",
-      "自分でも勉強を進められる人",
-      "定期的に勉強の方向性を確認したい人"
+      "最低限のサポートがほしい方",
+      "自分でも勉強を進められる方",
+      "定期的に勉強の方向性を確認したい方"
     ]
   },
   {
@@ -63,7 +63,7 @@ const products = [
     price: "月額24,800円",
     lead: "このサービスの基本となる、継続サポート型のプランです。",
     description:
-      "学習計画を作って終わりではなく、週ごとに進み具合を確認します。必要に応じて、計画や勉強方法も一緒に見直します。",
+      "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。ひとりでは勉強が続きにくい生徒や、保護者が学習状況を把握したい場合におすすめです。",
     featured: true,
     items: [
       "月ごとの学習方針の設計",
@@ -77,9 +77,9 @@ const products = [
       "必要に応じた学習計画の修正"
     ],
     fit: [
-      "一人では勉強が続きにくい人",
-      "毎週確認してもらう方が頑張りやすい人",
-      "計画から振り返りまで見てほしい人"
+      "ひとりでは勉強が続きにくい方",
+      "毎週確認してもらう方が頑張りやすい方",
+      "計画から振り返りまで見てほしい方"
     ]
   },
   {
@@ -99,10 +99,10 @@ const products = [
       "受験直前期の重点調整"
     ],
     fit: [
-      "手厚い個別サポートを受けたい人",
-      "難関校や難関大学を目指している人",
-      "受験まで細かく伴走してほしい人",
-      "保護者にも学習状況を共有したい人"
+      "手厚い個別サポートを受けたい方",
+      "難関校や難関大学を目指している方",
+      "受験まで細かく伴走してほしい方",
+      "保護者にも学習状況を共有したい方"
     ]
   }
 ];
@@ -151,30 +151,43 @@ const comparison = [
   {
     name: "動画パック",
     price: "9,800円",
-    target: "まず試してみたい人",
+    target: "まず試してみたい方",
     contents: "録画講義、PDF教材、確認問題、学習ガイド、復習チェックリスト",
-    fit: "自分のペースで学びたい人"
+    fit: "自分のペースで学びたい方",
+    description: "録画講義と教材で、自分のペースで学習を進める買い切り型の商品です。",
+    labels: [],
+    featured: false
   },
   {
     name: "コーチングライト",
     price: "14,800円／月",
-    target: "最低限のサポートがほしい人",
+    target: "最低限のサポートがほしい方",
     contents: "月1回の学習計画作成、月2回の面談、進捗確認、チャット相談",
-    fit: "自分で進めつつ、計画管理を手伝ってほしい人"
+    fit: "自分で進めつつ、計画管理を手伝ってほしい方",
+    description: "自分で進める力はあり、定期的に方向性を確認したい方向けです。",
+    labels: [],
+    featured: false
   },
   {
     name: "コーチング標準",
     price: "24,800円／月",
-    target: "継続的に学習管理をしてほしい人",
+    target: "継続的に学習管理をしてほしい方",
     contents: "月ごとの学習方針設計、月4回の面談、週次確認、計画修正、チャット相談",
-    fit: "一人では勉強が続きにくい人"
+    fit: "ひとりでは勉強が続きにくい方",
+    description:
+      "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。ひとりでは勉強が続きにくい生徒や、保護者が学習状況を把握したい場合におすすめです。",
+    labels: ["一番おすすめ", "迷ったらこのプラン"],
+    featured: true
   },
   {
     name: "上位プラン",
     price: "39,800円／月",
-    target: "手厚い個別サポートを受けたい人",
+    target: "手厚い個別サポートを受けたい方",
     contents: "標準プランの内容、志望校別の学習方針、課題確認、保護者共有",
-    fit: "受験まで細かく見てほしい人"
+    fit: "受験まで細かく見てほしい方",
+    description: "志望校や受験時期に合わせて、より細かく学習状況を確認したい方向けです。",
+    labels: [],
+    featured: false
   }
 ];
 
@@ -292,7 +305,7 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-7 text-slate-600">
-            生徒本人にも、学習状況を見守りたい保護者にも分かりやすい形で、日々の勉強を整理します。
+            生徒にも、学習状況を見守りたい保護者にも分かりやすい形で、日々の勉強を整理します。
           </p>
         </div>
       </section>
@@ -350,9 +363,14 @@ export default function Home() {
                 }`}
               >
                 {product.featured ? (
-                  <p className="mb-3 inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
-                    基本プラン
-                  </p>
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    <span className="inline-flex rounded-full bg-primary-600 px-3 py-1 text-xs font-bold text-white">
+                      一番おすすめ
+                    </span>
+                    <span className="inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
+                      迷ったらこのプラン
+                    </span>
+                  </div>
                 ) : null}
                 <h3 className="text-xl font-extrabold text-slate-950">{product.name}</h3>
                 <p className="mt-2 text-2xl font-extrabold text-primary-700">{product.price}</p>
@@ -365,7 +383,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-5 border-t border-slate-100 pt-5">
-                  <p className="text-sm font-bold text-slate-950">向いている人</p>
+                  <p className="text-sm font-bold text-slate-950">向いている方</p>
                   <div className="mt-3">
                     <CheckList items={product.fit} />
                   </div>
@@ -434,13 +452,35 @@ export default function Home() {
 
       <section id="pricing" className="bg-primary-50 py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader eyebrow="PRICE" title="料金プラン" text="料金と主な内容を比べられます。スマホでは、見やすいカード形式で表示しています。" />
-          <div className="mt-8 space-y-4 lg:hidden">
+          <SectionHeader
+            eyebrow="PRICE"
+            title="料金プラン"
+            text="サポートの手厚さと面談回数を比べながら選べます。迷う場合は、週1回の確認と計画修正まで行う標準プランがおすすめです。"
+          />
+          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {comparison.map((plan) => (
-              <article key={plan.name} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <article
+                key={plan.name}
+                className={`relative rounded-2xl border bg-white p-5 shadow-sm ${
+                  plan.featured ? "border-primary-600 shadow-lg ring-2 ring-primary-100" : "border-slate-200"
+                }`}
+              >
+                {plan.labels.length > 0 ? (
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {plan.labels.map((label) => (
+                      <span
+                        key={label}
+                        className="inline-flex rounded-full bg-primary-600 px-3 py-1 text-xs font-bold text-white"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
                 <h3 className="text-lg font-extrabold text-slate-950">{plan.name}</h3>
                 <p className="mt-2 text-2xl font-extrabold text-primary-700">{plan.price}</p>
-                <dl className="mt-4 space-y-3 text-sm leading-6">
+                <p className="mt-3 text-sm leading-7 text-slate-600">{plan.description}</p>
+                <dl className="mt-5 space-y-3 border-t border-slate-100 pt-5 text-sm leading-6">
                   <div>
                     <dt className="font-bold text-slate-950">対象</dt>
                     <dd className="mt-1 text-slate-600">{plan.target}</dd>
@@ -450,36 +490,12 @@ export default function Home() {
                     <dd className="mt-1 text-slate-600">{plan.contents}</dd>
                   </div>
                   <div>
-                    <dt className="font-bold text-slate-950">向いている人</dt>
+                    <dt className="font-bold text-slate-950">向いている方</dt>
                     <dd className="mt-1 text-slate-600">{plan.fit}</dd>
                   </div>
                 </dl>
               </article>
             ))}
-          </div>
-          <div className="mt-8 hidden overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm lg:block">
-            <table className="w-full table-fixed text-left text-sm">
-              <thead className="bg-slate-50 text-slate-950">
-                <tr>
-                  <th className="w-1/6 px-4 py-4 font-bold">商品名</th>
-                  <th className="w-1/6 px-4 py-4 font-bold">料金</th>
-                  <th className="w-1/5 px-4 py-4 font-bold">対象</th>
-                  <th className="w-1/3 px-4 py-4 font-bold">主な内容</th>
-                  <th className="w-1/5 px-4 py-4 font-bold">向いている人</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {comparison.map((plan) => (
-                  <tr key={plan.name} className="align-top">
-                    <td className="px-4 py-5 font-bold text-slate-950">{plan.name}</td>
-                    <td className="px-4 py-5 font-bold text-primary-700">{plan.price}</td>
-                    <td className="px-4 py-5 leading-7 text-slate-600">{plan.target}</td>
-                    <td className="px-4 py-5 leading-7 text-slate-600">{plan.contents}</td>
-                    <td className="px-4 py-5 leading-7 text-slate-600">{plan.fit}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
           <div className="mt-8">
             <LineButton />

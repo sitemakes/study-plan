@@ -1,9 +1,9 @@
 const LINE_URL = "https://line.me/R/ti/p/@xxxxx";
 
 const heroFeatures = [
-  "動画で自分のペースで復習できる",
-  "今やることがはっきりする",
-  "面談とLINEで進み具合を見直せる"
+  "毎月の学習計画を作成",
+  "毎週の進捗確認と計画修正",
+  "LINE相談と必要時の保護者共有"
 ];
 
 const worries = [
@@ -116,12 +116,12 @@ const videoPackItems = [
 ];
 
 const coachingItems = [
-  "学習計画の作成",
+  "月ごとの学習計画の作成",
   "週ごとの進捗確認",
-  "課題の優先順位整理",
-  "勉強方法の見直し",
-  "模試や定期テストの振り返り",
-  "LINEでの相談対応"
+  "教材の優先順位整理",
+  "計画の修正",
+  "LINEでの相談対応",
+  "必要に応じた保護者共有"
 ];
 
 const steps = [
@@ -313,26 +313,26 @@ export default function Home() {
       <section id="service" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeader
           eyebrow="SERVICE"
-          title="勉強を「やる気」だけに頼らない"
-          text="勉強が続かないのは、やる気がないからとは限りません。やることが曖昧だったり、進み具合を見直す機会がなかったりすると、続けるのが難しくなります。"
+          title="毎月・毎週のサポートで学習を管理"
+          text="月ごとに学習計画を作り、週ごとに進み具合を確認します。塾や学校の教材も含めて優先順位を整理し、予定通りに進まない時は計画を修正します。"
         />
         <div className="mt-7 grid gap-5 lg:grid-cols-3">
           <div className="rounded-xl border border-slate-200 p-5">
-            <h3 className="font-bold text-slate-950">動画で内容を確認</h3>
+            <h3 className="font-bold text-slate-950">毎月、学習計画を作成</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              録画講義やPDF教材で、重要ポイントを自分のペースで確認できます。
+              目標、テスト日程、使っている教材を確認し、今月やる範囲を決めます。何から進めるか迷わないように、教材の優先順位も整理します。
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
-            <h3 className="font-bold text-slate-950">計画と進捗を一緒に整理</h3>
+            <h3 className="font-bold text-slate-950">毎週、進捗を確認</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              何を、いつまでに、どう進めるかを整理し、日々の勉強に落とし込みます。
+              面談で、終わった内容、残っている課題、理解が不安な単元を確認します。進みが遅れている時は、次の週の量や順番を調整します。
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
-            <h3 className="font-bold text-slate-950">うまく進まない時も見直す</h3>
+            <h3 className="font-bold text-slate-950">LINE相談と保護者共有</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              予定通りに進まない時も、原因を一緒に整理して、次の計画に反映します。
+              LINEで教材の進め方や優先順位を相談できます。必要に応じて、学習状況や今後の方針を保護者にも共有します。
             </p>
           </div>
         </div>
@@ -401,10 +401,10 @@ export default function Home() {
             <SectionHeader
               eyebrow="COACHING"
               title="コーチングで、勉強を続ける流れを作る"
-              text="コーチングでは、学習計画を作るだけでなく、進み具合の確認と計画の見直しまで行います。"
+              text="コーチングでは、毎月の学習計画と毎週の進捗確認を行います。学校や塾の教材、参考書、動画教材の中から優先順位を決め、今やることを具体的にします。"
             />
             <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
-              計画通りに進まなかった時も、ただ反省するだけでは終わりません。勉強時間、教材の難しさ、優先順位を整理し、次の計画に反映します。
+              計画通りに進まなかった時は、勉強時間、教材の難しさ、優先順位を一緒に確認します。そのうえで、翌週に進める量や順番を調整し、無理なく続けられる計画に修正します。
             </p>
           </div>
           <div className="rounded-2xl bg-white p-5 shadow-sm sm:p-6">

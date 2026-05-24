@@ -31,12 +31,6 @@ const products = [
       "おすすめの進め方",
       "復習チェックリスト",
       "学び方のポイント解説"
-    ],
-    fit: [
-      "まずは手軽に試したい方",
-      "自分のペースで学びたい方",
-      "独学で進めたい方",
-      "コーチングの前に教材を試してみたい方"
     ]
   },
   {
@@ -52,11 +46,6 @@ const products = [
       "課題の優先順位整理",
       "チャット相談",
       "必要に応じた動画パックの提案"
-    ],
-    fit: [
-      "最低限のサポートがほしい方",
-      "自分でも勉強を進められる方",
-      "定期的に勉強の方向性を確認したい方"
     ]
   },
   {
@@ -76,11 +65,6 @@ const products = [
       "模試や定期テストの振り返り",
       "チャット相談",
       "必要に応じた学習計画の修正"
-    ],
-    fit: [
-      "ひとりでは勉強が続きにくい方",
-      "毎週確認してもらう方が頑張りやすい方",
-      "計画から振り返りまで見てほしい方"
     ]
   },
   {
@@ -98,12 +82,6 @@ const products = [
       "学習記録の細かな確認",
       "保護者への共有",
       "受験直前期の重点調整"
-    ],
-    fit: [
-      "手厚い個別サポートを受けたい方",
-      "難関校や難関大学を目指している方",
-      "受験まで細かく伴走してほしい方",
-      "保護者にも学習状況を共有したい方"
     ]
   }
 ];
@@ -353,12 +331,6 @@ export default function Home() {
                   <p className="text-sm font-bold text-slate-950">内容</p>
                   <div className="mt-3">
                     <CheckList items={product.items} />
-                  </div>
-                </div>
-                <div className="mt-5 border-t border-slate-100 pt-5">
-                  <p className="text-sm font-bold text-slate-950">向いている方</p>
-                  <div className="mt-3">
-                    <CheckList items={product.fit} />
                   </div>
                 </div>
               </article>

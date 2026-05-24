@@ -147,50 +147,6 @@ const steps = [
   }
 ];
 
-const comparison = [
-  {
-    name: "動画パック",
-    price: "9,800円",
-    target: "まず試してみたい方",
-    contents: "録画講義、PDF教材、確認問題、学習ガイド、復習チェックリスト",
-    fit: "自分のペースで学びたい方",
-    description: "録画講義と教材で、自分のペースで学習する買い切り型の商品です。",
-    labels: [],
-    featured: false
-  },
-  {
-    name: "コーチングライト",
-    price: "14,800円／月",
-    target: "最低限のサポートがほしい方",
-    contents: "月1回の学習計画作成、月2回の面談、進捗確認、チャット相談",
-    fit: "自分で進めつつ、計画管理を手伝ってほしい方",
-    description: "自分で進めながら、月2回の面談で方向性を確認したい方向けです。",
-    labels: [],
-    featured: false
-  },
-  {
-    name: "コーチング標準",
-    price: "24,800円／月",
-    target: "継続的に学習管理をしてほしい方",
-    contents: "月ごとの学習方針設計、月4回の面談、週次確認、計画修正、チャット相談",
-    fit: "ひとりでは勉強が続きにくい方",
-    description:
-      "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。保護者が学習状況を把握したい場合にもおすすめです。",
-    labels: ["一番おすすめ", "迷ったらこのプラン"],
-    featured: true
-  },
-  {
-    name: "上位プラン",
-    price: "39,800円／月",
-    target: "手厚い個別サポートを受けたい方",
-    contents: "標準プランの内容、志望校別の学習方針、課題確認、保護者共有",
-    fit: "受験まで細かく見てほしい方",
-    description: "志望校や受験時期に合わせて、課題量や進め方まで細かく見直します。",
-    labels: [],
-    featured: false
-  }
-];
-
 const recommended = [
   "計画を立てても勉強が続かない",
   "教材の優先順位を決めてほしい",
@@ -292,7 +248,7 @@ export default function Home() {
           </div>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <LineButton />
-            <AnchorButton href="#pricing">料金プランを見る</AnchorButton>
+            <AnchorButton href="#service">サービス内容を見る</AnchorButton>
           </div>
         </div>
         <div className="rounded-2xl border border-primary-50 bg-primary-50 p-5 sm:p-6">
@@ -447,59 +403,6 @@ export default function Home() {
               <p className="mt-3 text-sm leading-7 text-slate-600">{step.text}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section id="pricing" className="bg-primary-50 py-14 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            eyebrow="PRICE"
-            title="料金プラン"
-            text="面談回数とサポート内容を比べながら選べます。迷う場合は、週1回の面談で計画修正まで行う標準プランがおすすめです。"
-          />
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {comparison.map((plan) => (
-              <article
-                key={plan.name}
-                className={`relative rounded-2xl border bg-white p-5 shadow-sm ${
-                  plan.featured ? "border-primary-600 shadow-lg ring-2 ring-primary-100" : "border-slate-200"
-                }`}
-              >
-                {plan.labels.length > 0 ? (
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {plan.labels.map((label) => (
-                      <span
-                        key={label}
-                        className="inline-flex rounded-full bg-primary-600 px-3 py-1 text-xs font-bold text-white"
-                      >
-                        {label}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-                <h3 className="text-lg font-extrabold text-slate-950">{plan.name}</h3>
-                <p className="mt-2 text-2xl font-extrabold text-primary-700">{plan.price}</p>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{plan.description}</p>
-                <dl className="mt-5 space-y-3 border-t border-slate-100 pt-5 text-sm leading-6">
-                  <div>
-                    <dt className="font-bold text-slate-950">対象</dt>
-                    <dd className="mt-1 text-slate-600">{plan.target}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-bold text-slate-950">主な内容</dt>
-                    <dd className="mt-1 text-slate-600">{plan.contents}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-bold text-slate-950">向いている方</dt>
-                    <dd className="mt-1 text-slate-600">{plan.fit}</dd>
-                  </div>
-                </dl>
-              </article>
-            ))}
-          </div>
-          <div className="mt-8">
-            <LineButton />
-          </div>
         </div>
       </section>
 

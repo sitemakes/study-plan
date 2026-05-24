@@ -1,27 +1,27 @@
 const LINE_URL = "https://line.me/R/ti/p/@xxxxx";
 
 const heroFeatures = [
-  "毎月の学習計画を作成",
-  "毎週の進捗確認と計画修正",
-  "LINE相談と必要時の保護者共有"
+  "学習計画を毎月作成",
+  "週1回の面談で進捗確認",
+  "LINE相談と保護者共有に対応"
 ];
 
 const worries = [
-  "計画を立てても、気づくと続かなくなっている",
-  "何から勉強すればいいか分からない",
-  "参考書や動画教材を買っても、最後まで使いきれない",
-  "塾に通っていても、自宅学習がなかなか安定しない",
-  "テスト前だけ頑張って、普段の勉強が続かない",
-  "保護者が子どもの学習状況を把握しづらい"
+  "勉強計画を立てても続かない",
+  "どの教材から進めればよいか分からない",
+  "参考書や動画教材を最後まで使い切れない",
+  "塾や学校の宿題以外の自宅学習が安定しない",
+  "テスト前だけ頑張り、普段の勉強が続かない",
+  "保護者が学習状況を把握しづらい"
 ];
 
 const products = [
   {
     name: "動画パック",
     price: "9,800円",
-    lead: "まずは自分のペースで始めたい方におすすめです。",
+    lead: "教材だけで始めたい方向けの買い切り商品です。",
     description:
-      "録画講義とPDF教材を使いながら、重要ポイントを確認できます。個別の進捗管理はありませんが、勉強の進め方や復習の仕方を一通り確認できます。",
+      "録画講義・PDF教材・確認問題で、重要ポイントを自分のペースで確認できます。個別の進捗管理は含まれません。",
     items: [
       "録画講義",
       "PDF教材",
@@ -41,9 +41,9 @@ const products = [
   {
     name: "コーチングライト",
     price: "月額14,800円",
-    lead: "計画づくりと進捗確認を、無理のないペースで行うプランです。",
+    lead: "月2回の面談で、計画と進捗を確認するプランです。",
     description:
-      "基本的には自分で勉強を進められるけれど、計画や優先順位を一緒に整理してほしい生徒に向いています。",
+      "自分で勉強を進めながら、教材の優先順位や進め方を定期的に確認したい生徒に向いています。",
     items: [
       "月1回の学習計画作成",
       "月2回の面談",
@@ -61,7 +61,7 @@ const products = [
   {
     name: "コーチング標準",
     price: "月額24,800円",
-    lead: "このサービスの基本となる、継続サポート型のプランです。",
+    lead: "週1回の面談で、学習管理を続ける基本プランです。",
     description:
       "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。ひとりでは勉強が続きにくい生徒や、保護者が学習状況を把握したい場合におすすめです。",
     featured: true,
@@ -85,9 +85,9 @@ const products = [
   {
     name: "上位プラン",
     price: "月額39,800円",
-    lead: "より細かく見てほしい方のためのプランです。",
+    lead: "受験期まで細かく伴走する手厚いプランです。",
     description:
-      "志望校や受験時期に合わせて、学習内容や進め方を細かく調整します。保護者への共有も含め、状況を見ながら進めます。",
+      "志望校や受験時期に合わせて、学習内容・課題量・進め方を細かく調整します。保護者共有にも対応します。",
     items: [
       "標準プランの内容",
       "より細かい学習管理",
@@ -108,18 +108,18 @@ const products = [
 ];
 
 const videoPackItems = [
-  "重要ポイントを動画で確認できる",
-  "PDF教材で手を動かしながら学べる",
-  "確認問題で理解度をチェックできる",
-  "おすすめの進め方に沿って学習できる",
-  "復習チェックリストで抜け漏れを確認できる"
+  "録画講義で重要ポイントを確認",
+  "PDF教材で手を動かして学習",
+  "確認問題で理解度をチェック",
+  "学習ガイドに沿って進められる",
+  "復習チェックリストで抜け漏れを確認"
 ];
 
 const coachingItems = [
-  "月ごとの学習計画の作成",
-  "週ごとの進捗確認",
+  "毎月の学習計画作成",
+  "週1回の進捗確認",
   "教材の優先順位整理",
-  "計画の修正",
+  "遅れに合わせた計画修正",
   "LINEでの相談対応",
   "必要に応じた保護者共有"
 ];
@@ -127,11 +127,11 @@ const coachingItems = [
 const steps = [
   {
     title: "LINEで相談",
-    text: "まずは、今の学習状況や困っていることをLINEで送ってください。"
+    text: "現在の学習状況、使っている教材、困っていることをLINEで送ってください。"
   },
   {
     title: "初回面談",
-    text: "Zoomで、目標・使っている教材・普段の勉強状況を確認します。動画パックが合うのか、コーチングプランが合うのかも一緒に整理します。"
+    text: "Zoomで目標、教材、普段の勉強時間を確認します。どのプランが合うかも整理します。"
   },
   {
     title: "商品・プランを選択",
@@ -139,11 +139,11 @@ const steps = [
   },
   {
     title: "学習開始",
-    text: "動画教材や学習計画に沿って、無理のないペースで学習を進めます。"
+    text: "教材と学習計画に沿って、毎日の勉強を進めます。"
   },
   {
     title: "進捗確認・計画修正",
-    text: "コーチングプランでは、面談やLINEで進み具合を確認し、必要に応じて計画を見直します。"
+    text: "コーチングでは面談とLINEで進み具合を確認し、遅れや理解度に合わせて計画を直します。"
   }
 ];
 
@@ -154,7 +154,7 @@ const comparison = [
     target: "まず試してみたい方",
     contents: "録画講義、PDF教材、確認問題、学習ガイド、復習チェックリスト",
     fit: "自分のペースで学びたい方",
-    description: "録画講義と教材で、自分のペースで学習を進める買い切り型の商品です。",
+    description: "録画講義と教材で、自分のペースで学習する買い切り型の商品です。",
     labels: [],
     featured: false
   },
@@ -164,7 +164,7 @@ const comparison = [
     target: "最低限のサポートがほしい方",
     contents: "月1回の学習計画作成、月2回の面談、進捗確認、チャット相談",
     fit: "自分で進めつつ、計画管理を手伝ってほしい方",
-    description: "自分で進める力はあり、定期的に方向性を確認したい方向けです。",
+    description: "自分で進めながら、月2回の面談で方向性を確認したい方向けです。",
     labels: [],
     featured: false
   },
@@ -175,7 +175,7 @@ const comparison = [
     contents: "月ごとの学習方針設計、月4回の面談、週次確認、計画修正、チャット相談",
     fit: "ひとりでは勉強が続きにくい方",
     description:
-      "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。ひとりでは勉強が続きにくい生徒や、保護者が学習状況を把握したい場合におすすめです。",
+      "週1回の面談で、学習計画・進捗確認・計画修正まで行う基本プランです。保護者が学習状況を把握したい場合にもおすすめです。",
     labels: ["一番おすすめ", "迷ったらこのプラン"],
     featured: true
   },
@@ -185,7 +185,7 @@ const comparison = [
     target: "手厚い個別サポートを受けたい方",
     contents: "標準プランの内容、志望校別の学習方針、課題確認、保護者共有",
     fit: "受験まで細かく見てほしい方",
-    description: "志望校や受験時期に合わせて、より細かく学習状況を確認したい方向けです。",
+    description: "志望校や受験時期に合わせて、課題量や進め方まで細かく見直します。",
     labels: [],
     featured: false
   }
@@ -193,21 +193,21 @@ const comparison = [
 
 const recommended = [
   "計画を立てても勉強が続かない",
-  "動画や参考書を買っても使いこなせない",
-  "自分に合った勉強の進め方が分からない",
-  "塾以外の自宅学習も整えたい",
-  "毎週の進捗確認がある方が頑張りやすい",
-  "保護者も学習状況を把握したい"
+  "教材の優先順位を決めてほしい",
+  "塾や学校の教材をうまく使いたい",
+  "自宅学習の進み具合を見てほしい",
+  "毎週の面談がある方が続けやすい",
+  "保護者も学習状況を確認したい"
 ];
 
 const faqs = [
   {
     q: "動画パックだけでも利用できますか？",
-    a: "はい。動画パックだけでも利用できます。自分のペースで学びたい方に向いています。"
+    a: "はい。動画パックだけでも利用できます。録画講義と教材で、自分のペースで進めたい方に向いています。"
   },
   {
     q: "コーチングでは授業もありますか？",
-    a: "基本は授業ではなく、学習計画と進捗管理が中心です。必要に応じて、勉強内容や勉強方法の相談もできます。"
+    a: "基本は授業ではなく、学習計画・進捗確認・計画修正が中心です。必要に応じて、教材の使い方も相談できます。"
   },
   {
     q: "初回面談はプランに含まれますか？",
@@ -223,7 +223,7 @@ const faqs = [
   },
   {
     q: "途中でプラン変更できますか？",
-    a: "はい。学習状況や時期に合わせて、プラン変更の相談もできます。"
+    a: "はい。学習状況や時期に合わせて、プラン変更も相談できます。"
   }
 ];
 
@@ -284,7 +284,7 @@ export default function Home() {
             チャットと面談で管理する学習サポート
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
-            勉強計画を作って終わりではなく、週ごとの進捗確認と計画修正まで行います。塾や学校の教材を使いながら、続けやすい学習習慣を作ります。
+            毎月の学習計画を作り、週1回の面談で進み具合を確認します。塾や学校の教材も使いながら、遅れた時は計画を直し、家庭学習を続けやすくします。
           </p>
           <div className="mt-6 inline-flex items-end gap-2 rounded-2xl border border-primary-100 bg-primary-50 px-5 py-4">
             <span className="text-sm font-bold text-primary-700">月額</span>
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded-2xl border border-primary-50 bg-primary-50 p-5 sm:p-6">
-          <p className="text-sm font-bold text-primary-700">続けやすさを支える3つのポイント</p>
+          <p className="text-sm font-bold text-primary-700">相談前に分かる主なサポート</p>
           <div className="mt-4 space-y-3">
             {heroFeatures.map((feature) => (
               <div key={feature} className="rounded-xl bg-white p-4 text-sm font-bold text-slate-800 shadow-sm">
@@ -305,7 +305,7 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-7 text-slate-600">
-            生徒にも、学習状況を見守りたい保護者にも分かりやすい形で、日々の勉強を整理します。
+            勉強の進み具合を生徒と保護者の両方が把握しやすいように、計画と課題を整理します。
           </p>
         </div>
       </section>
@@ -326,20 +326,20 @@ export default function Home() {
       <section id="service" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeader
           eyebrow="SERVICE"
-          title="毎月・毎週のサポートで学習を管理"
+          title="計画作成から進捗確認までまとめてサポート"
           text="月ごとに学習計画を作り、週ごとに進み具合を確認します。塾や学校の教材も含めて優先順位を整理し、予定通りに進まない時は計画を修正します。"
         />
         <div className="mt-7 grid gap-5 lg:grid-cols-3">
           <div className="rounded-xl border border-slate-200 p-5">
             <h3 className="font-bold text-slate-950">毎月、学習計画を作成</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              目標、テスト日程、使っている教材を確認し、今月やる範囲を決めます。何から進めるか迷わないように、教材の優先順位も整理します。
+              目標、テスト日程、使用教材を確認し、今月やる範囲を決めます。教材が多い場合は、優先順位も整理します。
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
             <h3 className="font-bold text-slate-950">毎週、進捗を確認</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              面談で、終わった内容、残っている課題、理解が不安な単元を確認します。進みが遅れている時は、次の週の量や順番を調整します。
+              面談で、終わった内容、残っている課題、理解が不安な単元を確認します。遅れている場合は、翌週の量や順番を調整します。
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
@@ -399,7 +399,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="VIDEO PACK"
             title="まずは動画パックから始められます"
-            text="いきなりコーチングを受けるのが不安な方は、動画パックから始めることもできます。録画講義・PDF教材・確認問題・学習ガイドを使って、自分のペースで学べます。"
+            text="コーチングの前に教材を試したい方は、動画パックから始められます。録画講義・PDF教材・確認問題で、自分のペースで学べます。"
           />
           <div className="rounded-2xl border border-slate-200 p-5 sm:p-6">
             <h3 className="font-bold text-slate-950">動画パックでできること</h3>
@@ -407,7 +407,7 @@ export default function Home() {
               <CheckList items={videoPackItems} />
             </div>
             <p className="mt-5 rounded-xl bg-slate-50 p-4 text-sm leading-7 text-slate-600">
-              動画パックは、学習内容の理解や勉強の進め方を確認するための商品です。個別の進捗管理や計画の見直しを希望する場合は、コーチングプランをご案内します。
+              動画パックは、学習内容を確認するための商品です。進捗管理や計画修正まで希望する場合は、LINEでコーチングプランをご相談ください。
             </p>
           </div>
         </div>
@@ -419,10 +419,10 @@ export default function Home() {
             <SectionHeader
               eyebrow="COACHING"
               title="コーチングで、勉強を続ける流れを作る"
-              text="コーチングでは、毎月の学習計画と毎週の進捗確認を行います。学校や塾の教材、参考書、動画教材の中から優先順位を決め、今やることを具体的にします。"
+              text="コーチングでは、毎月の学習計画と週1回の進捗確認を行います。学校や塾の教材、参考書、動画教材の中から優先順位を決め、今やることを具体的にします。"
             />
             <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
-              計画通りに進まなかった時は、勉強時間、教材の難しさ、優先順位を一緒に確認します。そのうえで、翌週に進める量や順番を調整し、無理なく続けられる計画に修正します。
+              計画通りに進まない時は、勉強時間、教材の難しさ、優先順位を確認します。そのうえで、翌週に進める量や順番を調整します。
             </p>
           </div>
           <div className="rounded-2xl bg-white p-5 shadow-sm sm:p-6">
@@ -455,7 +455,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="PRICE"
             title="料金プラン"
-            text="サポートの手厚さと面談回数を比べながら選べます。迷う場合は、週1回の確認と計画修正まで行う標準プランがおすすめです。"
+            text="面談回数とサポート内容を比べながら選べます。迷う場合は、週1回の面談で計画修正まで行う標準プランがおすすめです。"
           />
           <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {comparison.map((plan) => (
@@ -530,13 +530,13 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="rounded-2xl bg-primary-600 p-6 text-white sm:p-10 lg:p-12">
-          <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">まずは今の学習状況を相談してください</h2>
+          <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">まずはLINEで学習状況を相談してください</h2>
           <div className="mt-5 max-w-3xl space-y-4 text-sm leading-7 text-primary-50 sm:text-base">
             <p>
-              勉強が続かない理由は、やる気だけではありません。やることが曖昧だったり、進み具合を見直す機会がなかったりすることもあります。
+              今使っている教材、テスト日程、普段の勉強時間を送ってください。
             </p>
-            <p>動画で学ぶだけでよいのか。コーチングで管理した方がよいのか。</p>
-            <p>今の学習状況に合わせて、合う進め方を一緒に整理します。</p>
+            <p>動画パックで始めるか、コーチングで管理するかを一緒に整理します。</p>
+            <p>保護者からの相談も受け付けています。</p>
           </div>
           <div className="mt-7">
             <LineButton className="bg-white text-primary-700 hover:bg-primary-50" />

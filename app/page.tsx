@@ -237,10 +237,10 @@ export default function Home() {
             中高生向けオンライン学習サポート
           </p>
           <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-normal text-slate-950 sm:text-5xl">
-            チャットと面談で管理する学習サポート
+            自宅学習を、ひとり任せにしない。
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
-            毎月の学習計画を作り、週1回の面談で進み具合を確認します。塾や学校の教材も使いながら、遅れた時は計画を直し、家庭学習を続けやすくします。
+            学習計画・進捗確認・計画修正まで、LINEと面談で継続的にサポートします。
           </p>
           <div className="mt-6 inline-flex items-end gap-2 rounded-2xl border border-primary-100 bg-primary-50 px-5 py-4">
             <span className="text-sm font-bold text-primary-700">月額</span>

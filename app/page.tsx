@@ -188,6 +188,8 @@ function LineButton({ className = "" }: { className?: string }) {
   return (
     <a
       href={LINE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-primary-600 px-6 py-3 text-center text-base font-bold text-white shadow-sm transition hover:bg-primary-700 sm:w-auto ${className}`}
     >
       LINEで無料相談する
@@ -197,10 +199,15 @@ function LineButton({ className = "" }: { className?: string }) {
 
 function LineQrCode() {
   return (
-    <div className="inline-flex flex-col items-center rounded-xl bg-white p-3 text-center text-xs font-bold text-slate-700 shadow-sm">
+    <a
+      href={LINE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex flex-col items-center rounded-xl bg-white p-3 text-center text-xs font-bold text-slate-700 shadow-sm transition hover:bg-primary-50"
+    >
       <img src={LINE_QR_URL} alt="LINE公式アカウントのQRコード" className="h-28 w-28" />
       <span className="mt-2">QRコードから相談</span>
-    </div>
+    </a>
   );
 }
 

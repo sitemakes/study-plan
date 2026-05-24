@@ -236,7 +236,7 @@ export default function Home() {
           <p className="inline-flex rounded-full bg-primary-50 px-3 py-1 text-sm font-bold text-primary-700">
             中高生向けオンライン学習サポート
           </p>
-          <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-normal text-slate-950 sm:text-5xl">
+          <h1 className="mt-5 whitespace-nowrap text-base font-extrabold leading-tight tracking-normal text-slate-950 sm:text-3xl lg:text-4xl xl:text-5xl">
             自宅学習を、ひとり任せにしない。
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">

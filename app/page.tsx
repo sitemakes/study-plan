@@ -1,4 +1,5 @@
-const LINE_URL = "https://line.me/R/ti/p/@xxxxx";
+const LINE_URL = "https://lin.ee/ZYIFncy";
+const LINE_QR_URL = "https://qr-official.line.me/gs/M_144sclay_GW.png?oat_content=qr";
 
 const heroFeatures = [
   "学習計画を毎月作成",
@@ -191,6 +192,15 @@ function LineButton({ className = "" }: { className?: string }) {
     >
       LINEで無料相談する
     </a>
+  );
+}
+
+function LineQrCode() {
+  return (
+    <div className="inline-flex flex-col items-center rounded-xl bg-white p-3 text-center text-xs font-bold text-slate-700 shadow-sm">
+      <img src={LINE_QR_URL} alt="LINE公式アカウントのQRコード" className="h-28 w-28" />
+      <span className="mt-2">QRコードから相談</span>
+    </div>
   );
 }
 
@@ -441,8 +451,9 @@ export default function Home() {
             <p>動画パックで始めるか、コーチングで管理するかを一緒に整理します。</p>
             <p>保護者からの相談も受け付けています。</p>
           </div>
-          <div className="mt-7">
+          <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-end">
             <LineButton className="bg-white text-primary-700 hover:bg-primary-50" />
+            <LineQrCode />
           </div>
         </div>
       </section>
